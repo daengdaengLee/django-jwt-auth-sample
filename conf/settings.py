@@ -120,3 +120,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        # DRF의 인증에 사용되는 클래스로 rest_framework_simplejwt의 JWT인증 클래스 사용
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
